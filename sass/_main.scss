@@ -1,0 +1,151 @@
+.head {
+  height: 18.7rem;
+  background: url("../images//pattern-bg-mobile.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  @include lg {
+    height: 17.5rem;
+    background: url("../images//pattern-bg-desktop.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.container {
+  padding: 1.499rem;
+}
+
+.head__title {
+  padding-top: 0.2rem;
+  font-size: 24.2px;
+  letter-spacing: 0.3px;
+  text-align: center;
+  color: $white;
+
+  @include lg {
+    padding-top: 0.5rem;
+    font-size: 28px;
+    letter-spacing: 0.888px;
+  }
+}
+
+.head__search__container {
+  background: $white;
+  height: 3.7rem;
+  margin: 1.8rem auto 0rem auto;
+  max-width: 550px;
+  border-radius: 15px;
+  overflow: hidden;
+  @include flex-row(space-between, stretch);
+
+  .head__search {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    color: $veryDarkGray;
+    font-size: 16px;
+    letter-spacing: 0.55px;
+    padding: 0 1.5rem;
+    cursor: pointer;
+
+    &::placeholder {
+      font-size: 17px;
+      letter-spacing: 0.7px;
+    }
+  }
+
+  .head__button {
+    width: 4.4rem;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: $veryDarkGray;
+    cursor: pointer;
+
+    @include lg {
+      width: 4rem;
+    }
+  }
+}
+
+.info {
+  margin-top: 1.5rem;
+  position: absolute;
+  width: 86.6%;
+  max-width: 1110px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 18.5rem;
+  padding: 1.2rem;
+  border-radius: 13px;
+  background: $white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  z-index: 500;
+  @include flex-column(start, end);
+  gap: 1.2rem;
+
+  @include lg {
+    margin-top: 3rem;
+    @include flex-row(start, center);
+    height: 10rem;
+  }
+
+  .info__container {
+    text-align: center;
+    width: 100%;
+    line-height: 22.999px;
+    position: relative;
+
+    @include lg {
+      text-align: left;
+      height: 100%;
+      padding: 0.3rem 0rem 0rem 0.8rem;
+      line-height: 32.999px;
+    }
+  }
+
+  .info__separators {
+    display: none;
+
+    @include lg {
+      display: block;
+      border-left: 1px solid $darkGray;
+      height: 75px;
+    }
+  }
+
+  .info__title {
+    font-size: 11.999px;
+    text-transform: uppercase;
+    color: $darkGray;
+    font-weight: bold;
+
+    @include lg {
+      font-size: 13px;
+      letter-spacing: 0.9px;
+    }
+  }
+
+  .info__result {
+    font-size: 18.5px;
+    color: $veryDarkGray;
+    font-weight: bold;
+    letter-spacing: 0.4px;
+
+    @include lg {
+      padding-top: 1px;
+      font-size: 25px;
+      letter-spacing: 0.1px;
+    }
+  }
+}
+
+.map {
+  width: 100%;
+  height: 33rem;
+}

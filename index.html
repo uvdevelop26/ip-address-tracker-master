@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <main class="main">
+    <!-- header -->
+    <header class="head">
+      <div class="container">
+        <h1 class="head__title">IP Address Tracker</h1>
+        <!-- searcher -->
+        <div class="head__search__container">
+          <input type="search" name="search" id="search" aria-label="Search IP Address" class="head__search"
+            placeholder="Search for any IP address or domain" />
+          <button type="button" aria-label="search" class="head__button" id="searchButton">
+            <img src="images/icon-arrow.svg" alt="arrow" />
+          </button>
+        </div>
+        <!-- info result -->
+        <section class="info" id="info">
+          <div class="info__container">
+            <span class="info__title">ip address</span>
+            <p class="info__result" id="ipAddress">192.212.174.101</p>
+          </div>
+          <span class="info__separators"></span>
+          <div class="info__container">
+            <span class="info__title">location</span>
+            <p class="info__result" id="location">Brooklyn, NY 10001</p>
+          </div>
+          <span class="info__separators"></span>
+          <div class="info__container">
+            <span class="info__title">timezone</span>
+            <p class="info__result" id="timezone">UTC -05:00</p>
+          </div>
+          <span class="info__separators"></span>
+          <div class="info__container">
+            <span class="info__title">isp</span>
+            <p class="info__result" id="isp">SpaceX Starlink</p>
+          </div>
+        </section>
+      </div>
+    </header>
+    <!-- map -->
+    <section id="map" class="map"></section>
+  </main>
+</body>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="js/main.js"></script>
+</html>
